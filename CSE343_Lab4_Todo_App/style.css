@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2ff;
+  color: #192234;
+  font-family: Arial, sans-serif;
+}
+
+.todo-app {
+  width: 90%;
+  max-width: 770px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(26, 36, 75, 0.07);
+}
+
+h1 {
+  margin: 0 0 13px;
+  font-size: 21px;
+}
+
+form {
+  display: flex;
+  gap: 9px;
+}
+
+#new-todo {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e1e5ed;
+  background: #f9faff;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-btn {
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.toolbar p, footer {
+  font-size: 12px;
+  color: #758094;
+}
+
+.toolbar p {
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+}
+
+.filters button {
+  border: 0;
+  border-radius: 6px;
+  background: white;
+  color: #687386;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filters button.selected {
+  color: #3b82f6;
+  background: #eaf2ff;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 12px;
+  border-top: 1px solid #eef0f4;
+  font-size: 14px;
+}
+
+.todo-item input[type="checkbox"] {
+  margin: 0;
+  accent-color: #a17ac7;
+  cursor: pointer;
+}
+
+.todo-text, .edit-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-item.completed .todo-text {
+  color: #959aaa;
+  text-decoration: line-through;
+}
+
+.edit-input {
+  font: inherit;
+  padding: 4px 6px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #858a99;
+  font-size: 17px;
+}
+
+footer {
+  border-top: 1px solid #eef0f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.clear-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.clear-buttons button {
+  border: 1px solid #bfc4cd;
+  background: #f7f7f7;
+  color: #727986;
+  padding: 3px 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+@media (max-width: 590px) {
+  .toolbar, footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .todo-app {
+    padding: 16px;
+  }
+}

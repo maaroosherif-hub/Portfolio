@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App - CSE343 Lab 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="todo-app">
+    <h1>Todo App</h1>
+
+    <form id="todo-form">
+      <input id="new-todo" type="text" placeholder="What needs doing?" aria-label="New task">
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+
+    <div class="toolbar">
+      <p>Tip: double-click a todo to edit. Press Enter to save.</p>
+      <div class="filters" aria-label="Filter tasks">
+        <button id="filter-all" class="selected" type="button">All</button>
+        <button id="filter-active" type="button">Active</button>
+        <button id="filter-completed" type="button">Completed</button>
+      </div>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <footer>
+      <span id="remaining">2 items left</span>
+      <div class="clear-buttons">
+        <button id="clear-completed" type="button">Clear completed</button>
+        <button id="clear-all" type="button">Clear all</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Browsers run the JavaScript generated from app.ts. -->
+  <script src="app.js"></script>
+</body>
+</html>
